@@ -1,0 +1,112 @@
+.sideNavCont{
+    display: flex;
+    background-color:var(--secondaryColor);
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    left: 0;
+    align-self: flex-start;
+    height: 100vh;
+}
+
+.header{
+    display: flex;
+    height: 1rem;
+    align-items: center;
+    border-bottom: 1px solid var(--lightGrayColor);
+    width: 100%;
+    padding-bottom: 2.6rem;
+    padding-top: 2.6rem;
+    padding-left: 1rem;
+}
+.logo{
+    width: 56px;
+    height: 56px;
+}
+.title{
+    display: flex;
+    flex-direction: row;
+    font-size: 1.8rem;
+    align-items: center;
+}
+.ev{
+    display: flex;
+    font-weight: bold;
+    color:var(--primaryColor);
+    font-size: 2rem;
+    margin-right: 0.5rem;
+}
+.hub{
+    display: flex;
+}
+@media screen and (max-width: 768px) {
+    .title{
+        display: none;
+    }
+}
+.navTabsCont{
+    width: 300px;
+    padding-top: 0.5rem;
+    background-color: var(--secondaryColor);
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+@media screen and (max-width: 768px) {
+    .navTabsCont{
+        width: 80px;
+    }
+}
+.tabCont{
+    display: flex;
+    align-items: center;
+    padding-top: 0.6rem;
+    padding-bottom: 1.6rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+.myCarsListCont{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    background-color: var(--backgroundColor);
+}
+@media screen and (max-width: 768px) {
+    .myCarsListCont{
+        display: none;
+    }
+    
+}
+.myCarItem{
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    height: 6rem;
+}
+.iconCont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.2rem;
+}
+.icon{
+    width: 1.6rem;
+    height: 1.6rem;
+    transition: all 0.2s ease-in-out;
+}
+.tabTxt{
+    margin-left: 0.6rem;
+}
+@media screen and (max-width: 768px) {
+    .tabTxt{
+        display: none;
+    }
+    .icon{
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+}
