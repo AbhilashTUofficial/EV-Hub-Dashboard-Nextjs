@@ -9,8 +9,10 @@
 :root {
   --backgroundColor:#0F0F0F;
   --primaryColor:#33D999;
-  --secondaryColor:#141414;
+  --primaryColorAccent:#33d9990b;
+  --secondaryColor:#14141414;
   --lightGrayColor:#9E9E9E;
+  --whiteColor:whitesmoke;
 
 }
 

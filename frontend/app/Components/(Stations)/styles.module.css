@@ -1,0 +1,43 @@
+.stationsCont{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--backgroundColor);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100vh;
+}
+.stations{
+    display: flex;
+    flex:1;
+    width: 100%;
+    background-color: var(--backgroundColor);
+    padding: 1rem;
+    gap: 1rem;
+}
+@media screen and (max-width: 1200px) {
+    .dashboard{
+        display: block;
+    }
+}
+.section1{
+    display: flex;
+    flex:2;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: red; */
+    padding: 1rem;  
+}
+.section2{
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: green;
+}
+.locationCardCont{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 300px;
+}

@@ -1,9 +1,12 @@
 import React from 'react'
 import styles from '../styles.module.css'
+import Card from '../../(Common)/Card/Card';
 
 const StationsListCard = () => {
     return (
-        <div className={styles.stationsListCardCont}>StationsListCard</div>
+        <Card>
+            <div className={styles.stationsListCardCont}>StationsListCard</div>
+        </Card>
     )
 }
 

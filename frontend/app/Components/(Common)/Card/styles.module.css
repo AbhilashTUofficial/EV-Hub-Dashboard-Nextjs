@@ -1,0 +1,12 @@
+.cardCont{
+    background-color: var(--secondaryColor);
+    border-radius: 1rem;
+    margin-top:1rem ;
+    display: flex;
+    flex:1;
+    transition: all 0.3s ease;
+}
+.cardCont:hover{
+    box-shadow: 0 0 10px 0 var(--primaryColorAccent);
+
+}

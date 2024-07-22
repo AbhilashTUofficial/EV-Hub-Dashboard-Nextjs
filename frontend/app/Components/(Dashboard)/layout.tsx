@@ -5,11 +5,11 @@ import EVCarsCard from './EVCarsCard/EVCarsCard'
 import ChargeStatsCard from './ChargeStatsCard/ChargeStatsCard'
 import StationsListCard from './StationsListCard/StationsListCard'
 import Footer from '../(Footer)/Footer'
-const Panel = () => {
+const Dashboard = () => {
     return (
-        <div className={styles.panelCont}>
+        <div className={styles.dashboardCont}>
             <TopBar />
-            <div className={styles.panel}>
+            <div className={styles.dashboard}>
                 <div className={styles.section1}>
                     <EVCarsCard />
                     <EVCarsCard />
@@ -26,4 +26,4 @@ const Panel = () => {
     )
 }
 
-export default Panel
+export default Dashboard

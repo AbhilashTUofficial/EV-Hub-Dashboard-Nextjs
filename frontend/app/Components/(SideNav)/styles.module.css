@@ -13,7 +13,7 @@
     display: flex;
     height: 1rem;
     align-items: center;
-    border-bottom: 1px solid var(--lightGrayColor);
+    border-bottom: 1px solid rgba(245, 245, 245, 0.138);
     width: 100%;
     padding-bottom: 2.6rem;
     padding-top: 2.6rem;
@@ -26,14 +26,14 @@
 .title{
     display: flex;
     flex-direction: row;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     align-items: center;
 }
 .ev{
     display: flex;
     font-weight: bold;
     color:var(--primaryColor);
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin-right: 0.5rem;
 }
 .hub{
