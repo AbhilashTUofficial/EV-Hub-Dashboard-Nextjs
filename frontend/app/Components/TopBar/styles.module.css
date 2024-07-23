@@ -1,0 +1,62 @@
+.topBarCont{
+    display: flex;
+    width: 100%;
+    background-color: var(--backgroundColor);
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+.pageInfoCont{
+    align-items: center;
+}
+@media screen and (max-width: 768px) {
+    .pageInfoCont{
+        display: none;
+    }
+}
+.routePath{
+    color: var(--whiteColor);
+    font-size: 0.8rem;
+}
+.routeName{
+    color: var(--primaryColor);
+    font-size: 1.4rem;
+    margin-top:0.6rem ;
+    font-weight: bold;
+}
+.actionsCont{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 390px;
+    background-color: var(--secondaryColor);
+    border-radius: 99rem;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.searchBar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 200px;
+    border-radius: 99rem;
+    background-color: var(--backgroundColor);
+}
+.icon{
+    width: 20px;
+    height: 20px;
+    margin: 1rem;
+}
+.searchInput{
+    border:none;
+    outline: none;
+    width: 70%;
+    height: 100%;
+    background-color: transparent;
+    color: var(--whiteColor);
+    font-size: 1rem;
+    overflow: hidden;
+    margin-right: 1rem;
+}

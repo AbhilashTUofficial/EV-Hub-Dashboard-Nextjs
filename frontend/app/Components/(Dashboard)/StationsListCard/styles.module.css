@@ -1,0 +1,14 @@
+.stationsListCardCont{
+    display: flex;
+    flex: 1;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+@media screen and (max-width: 1200px) {
+    .stationsListCardCont{
+        flex: none;
+        height: 260px;
+    } 
+}

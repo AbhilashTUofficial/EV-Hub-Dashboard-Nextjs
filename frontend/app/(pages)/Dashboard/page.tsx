@@ -1,10 +1,10 @@
 import React from 'react'
 import styles from './styles.module.css'
-import TopBar from './TopBar/TopBar'
-import EVCarsCard from './EVCarsCard/EVCarsCard'
-import ChargeStatsCard from './ChargeStatsCard/ChargeStatsCard'
-import StationsListCard from './StationsListCard/StationsListCard'
-import Footer from '../(Footer)/Footer'
+import ChargeStatsCard from '@/app/Components/(Dashboard)/ChargeStatsCard/ChargeStatsCard'
+import EVCarsCard from '@/app/Components/(Dashboard)/EVCarsCard/EVCarsCard'
+import StationsListCard from '@/app/Components/(Dashboard)/StationsListCard/StationsListCard'
+import TopBar from '@/app/Components/TopBar/TopBar'
+import Footer from '@/app/Components/(Footer)/Footer'
 const Dashboard = () => {
     return (
         <div className={styles.dashboardCont}>
@@ -20,8 +20,6 @@ const Dashboard = () => {
                     <StationsListCard />
                 </div>
             </div>
-            <Footer />
-
         </div>
     )
 }

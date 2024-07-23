@@ -1,9 +1,10 @@
 .cardCont{
     background-color: var(--secondaryColor);
     border-radius: 1rem;
-    margin-top:1rem ;
+    margin-top:1.6rem ;
     display: flex;
     flex:1;
+    /* height: 100%; */
     transition: all 0.3s ease;
 }
 .cardCont:hover{

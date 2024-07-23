@@ -1,6 +1,6 @@
 import React from 'react'
-import styles from '../styles.module.css'
-import Card from '../../(Common)/Card/Card'
+import styles from './styles.module.css'
+import Card from '../../Card/Card'
 const EVCarsCard = () => {
     return (
         <Card>

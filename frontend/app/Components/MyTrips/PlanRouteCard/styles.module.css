@@ -1,0 +1,11 @@
+.planRouteCardCont{
+    display: flex;
+    flex:4;
+    flex-direction: column;
+    /* min-height: 400px; */
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}

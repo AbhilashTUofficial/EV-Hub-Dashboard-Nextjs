@@ -1,0 +1,40 @@
+.dashboardCont{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--backgroundColor);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100vh;
+}
+.dashboard{
+    display: flex;
+    flex:1;
+    width: 100%;
+    background-color: var(--backgroundColor);
+    padding: 1rem;
+    gap: 1.6rem;
+}
+@media screen and (max-width: 1200px) {
+    .dashboard{
+        display: block;
+    }
+}
+.section1{
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.section2{
+    display: flex;
+    flex:2;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+
+
+
+

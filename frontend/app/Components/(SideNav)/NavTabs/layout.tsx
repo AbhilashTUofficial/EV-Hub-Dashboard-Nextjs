@@ -1,11 +1,11 @@
 'use client'
 
 import React from 'react'
-import styles from './styles.module.css'
+import styles from '../styles.module.css'
 import Image from 'next/image'
 import { Logo } from '@/app/Assets/Images/AssetsExports'
-import NavTabs from './NavTabs/navTabs'
-import MyCarsList from './MyCars/MyCarsList'
+import NavTabs from './navTabs'
+import MyCarsList from '../MyCars/MyCarsList'
 const SideNav = () => {
     return (
         <div className={styles.sideNavCont}>

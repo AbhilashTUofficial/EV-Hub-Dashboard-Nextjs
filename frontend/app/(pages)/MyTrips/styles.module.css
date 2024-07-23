@@ -1,0 +1,17 @@
+.myTripsCont{
+    display: flex;
+    width: 100%;
+    background-color: var(--backgroundColor);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100vh;
+}
+.myTrips{
+    display: flex;
+    flex:1;
+    width: 100%;
+    background-color: var(--backgroundColor);
+    padding: 1rem;
+    gap: 1.6rem;
+    flex-direction: column;
+}
