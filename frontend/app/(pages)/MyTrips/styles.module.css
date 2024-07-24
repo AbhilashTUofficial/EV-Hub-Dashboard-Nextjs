@@ -4,7 +4,7 @@
     background-color: var(--backgroundColor);
     overflow-x: hidden;
     overflow-y: scroll;
-    height: 100vh;
+    height: 88vh;
 }
 .myTrips{
     display: flex;

@@ -1,21 +1,18 @@
 import React from 'react'
 import styles from './styles.module.css'
 import Card from '../../Card/Card'
-import BarGraph from './BarGraph'
-const EVCarsCard = () => {
+
+const QuickPlannerCard = () => {
     return (
         <Card>
-            <div className={styles.evCarsCardCont}>
+            <div className={styles.gasSavingsCardCont}>
                 <div className={styles.categoryCont}>
                     <div className={styles.category}>
-                        EV cars
+                        Gas Savings
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center' }}>
                         <div className={styles.model}>
-                            Nissan Leaf
-                        </div>
-                        <div className={styles.name}>
-                            Tesla X
+                            Year
                         </div>
                         <div className={styles.trailingBtn}>
                             +
@@ -24,28 +21,31 @@ const EVCarsCard = () => {
                 </div>
                 <div className={styles.statsCont}>
                     <div className={styles.stat}>
-                        <div className={styles.statsUnit}>Time</div>
-                        <div className={styles.statsValue}>5:21
-                            <div className={styles.unit}>h</div>
+                        <div className={styles.statsUnit}>Saved money</div>
+                        <div className={styles.statsValue}>
+                            <div className={styles.unit}>$</div>
+                            1,716
                         </div>
                     </div>
                     <div className={styles.stat}>
-                        <div className={styles.statsUnit}>Battery</div>
-                        <div className={styles.statsValue}>88
-                            <div className={styles.unit}>%</div>
+                        <div className={styles.statsUnit}>Using private</div>
+                        <div className={styles.statsValue}>
+                            <div className={styles.unit}>$</div>
+                            259
                         </div>
                     </div>
                     <div className={styles.stat}>
-                        <div className={styles.statsUnit}>Power reserve</div>
-                        <div className={styles.statsValue}>428
-                            <div className={styles.unit}>km</div>
+                        <div className={styles.statsUnit}>m, not burned</div>
+                        <div className={styles.statsValue}>
+                            39
+                            <div className={styles.unit}>O2</div>
                         </div>
                     </div>
                 </div>
-                <BarGraph />
+
             </div>
         </Card>
     )
 }
 
-export default EVCarsCard
+export default QuickPlannerCard

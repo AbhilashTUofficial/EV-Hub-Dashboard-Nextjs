@@ -22,8 +22,10 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="horizontalCont" >
           <SideNav />
-          {/* <TopBar /> */}
-          {children}
+          <div style={{ width: "100%" }}>
+            <TopBar />
+            {children}
+          </div>
         </div>
       </body>
     </html>

@@ -1,4 +1,4 @@
-.evCarsCardCont{
+.gasSavingsCardCont{
     /* display: flex; */
     min-height: 200px;
     width: 100%;
@@ -6,9 +6,10 @@
     align-items: center;
     padding: 1rem;
     transition: all 0.3s ease;
+
 }
 @media screen and(max-width: 1200px) {
-    .evCarsCardCont{
+    .gasSavingsCardCont{
         flex: none;
         height: 260px;
     }
@@ -52,8 +53,6 @@
     justify-content: space-between;
 }
 .stat{
-    /* width: 4rem;
-    height: 4rem; */
     justify-content: center;
     align-items: center;
     color: var(--whiteColor);
@@ -74,14 +73,19 @@
 }
 .graphCont{
     display: flex;
-    flex-direction: column;
     justify-content: center;
 }
 .graphTitle{
     font-size: 0.8rem;
-    color: var(--primaryColor);
-    align-items: center;
+    align-items: flex-start;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100px;
+    padding-left: 1.6rem;
+}
+.caActive{
+    color: var(--primaryColor);
 }
 .graph{
     display: flex;
@@ -89,14 +93,24 @@
     background-color: var(--backgroundColor);
     border-radius: 0.5rem;
     margin-top: 0.4rem;
+    justify-content: space-between;
 }
-.graphBar{
-    position: relative;
-    width: 100%;
-    height: 4rem;
-    background:linear-gradient(90deg, var(--primaryColor) 0%, var(--primaryColorLight) 100%); ;
+.graphSlab{
+    width: 1.4rem;
+    height: 2.6rem;
     margin: 0.2rem;
-    border-radius: 0.5rem;
+    margin-right: 0rem;
+    border-radius: 0.3rem;
+    background-color: var(--secondaryColor);
+}
+.graphSlab:last-child{
+    margin-right: 0.2rem;
+}
+.graphSlab1{
+    background-color: var(--primaryColor); 
+}
+.graphSlab2{
+    background-color: var(--lightGrayColor); 
 }
 .graphDataCont{
     display: flex;
@@ -116,9 +130,4 @@
     height: 1rem;
     justify-content: center;
     align-items: center;
-}
-.graphText{
-    font-size: 0.8rem;
-    color: var(--lightGrayColor);
-    margin-top: 0.2rem;
 }

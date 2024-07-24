@@ -4,7 +4,9 @@
     background-color: var(--backgroundColor);
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
 }
 .pageInfoCont{
     align-items: center;
