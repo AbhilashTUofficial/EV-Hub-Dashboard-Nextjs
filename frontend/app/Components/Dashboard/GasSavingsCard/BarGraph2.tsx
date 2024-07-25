@@ -9,7 +9,7 @@ const BarGraph2 = () => {
         <div className={styles.graphCont}>
             <div className={styles.graph}>
                 {
-                    Array.from({ length: 10 }, (_, index) => (
+                    Array.from({ length: 14 }, (_, index) => (
                         <div className={`${styles.graphSlab2} ${styles.graphSlab}`} key={index} />
                     ))
                 }

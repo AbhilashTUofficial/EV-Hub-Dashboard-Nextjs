@@ -1,0 +1,64 @@
+.qtpCont{
+    position: relative;
+    min-height: 200px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    transition: all 0.3s ease;
+
+}
+@media screen and(max-width: 1200px) {
+    .qtpCont{
+        flex: none;
+        height: 260px;
+    }
+}
+.headerCont{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--whiteColor);
+    flex-direction: row;
+    width: 100%;
+}
+.trailingBtn{
+    padding: 0.4rem;
+}
+.graphCont{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.imgCont{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.graphBackground{
+    display: flex;
+    width: 100%;
+    height: 160px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin-top: 1rem;
+    box-shadow: 0 0 10px 0 var(--secondaryColorAccent);
+    z-index: 0;
+}
+.graphDataCont{
+    /* display: none; */
+    /* display: flex; */
+    z-index: 1;
+    background-color: var(--backgroundColor);
+    width: 100%;
+    height: 100%;
+}
+.boardingCont{
+
+}

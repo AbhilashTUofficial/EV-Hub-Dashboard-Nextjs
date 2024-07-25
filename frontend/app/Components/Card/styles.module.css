@@ -8,6 +8,6 @@
     transition: all 0.3s ease;
 }
 .cardCont:hover{
-    box-shadow: 0 0 10px 0 var(--primaryColorAccent);
+    box-shadow: 0 0 10px 0 var(--secondaryColor);
 
 }
