@@ -5,7 +5,7 @@ import styles from '../styles.module.css'
 import Image from 'next/image'
 import { Logo } from '@/app/Assets/Images/AssetsExports'
 import NavTabs from './navTabs'
-import MyCarsList from '../MyCars/MyCarsList'
+import MyCarsList from '../MyCars'
 const SideNav = () => {
     return (
         <div className={styles.sideNavCont}>

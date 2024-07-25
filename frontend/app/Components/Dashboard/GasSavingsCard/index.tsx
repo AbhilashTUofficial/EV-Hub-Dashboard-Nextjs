@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './styles.module.css'
-import Card from '../../Card/Card'
+import Card from '../../Card'
 import BarGraph1 from './BarGraph1'
 import BarGraph2 from './BarGraph2'
 const GasSavingsCard = () => {
