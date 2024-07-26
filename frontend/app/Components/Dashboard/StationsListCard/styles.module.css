@@ -1,14 +1,140 @@
 .stationsListCardCont{
     display: flex;
+    flex-direction: column;
     flex: 1;
     width: 100%;
-    justify-content: center;
     align-items: center;
     padding: 1rem;
+    height: 210px;
 }
 @media screen and (max-width: 1200px) {
     .stationsListCardCont{
         flex: none;
         height: 260px;
     } 
+}
+.headerCont{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 0.8rem;
+    color: var(--whiteColor);
+    width: 100%;
+    border-bottom: 1px solid var(--lightGrayColor);
+
+}
+.favorite{
+    font-size: 0.8rem;
+    color: var(--primaryColor);
+    padding: 0.4rem;
+}
+.all{
+    font-size: 0.8rem;
+    color: var(--lightGrayColor);
+    padding: 0.4rem;
+}
+.listItemCont{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid var(--lightGrayColor);
+}
+.stationsListCont{
+    width: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+.generalInfo{
+    display: flex;
+    flex-direction: row;
+}
+.stationStatus{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+.carStats{
+    background-color: var(--backgroundColor);
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    margin-bottom: 0.2rem;
+    margin-top: 0.2rem;
+    font-size: 0.6rem;
+    border: 1px solid var(--primaryColor);
+}
+.stationImg{
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1rem;
+    border-radius: 0.5rem;
+}
+.txt1{
+    color: var(--whiteColor);
+    font-size: 0.8rem;
+}
+.txt2{
+    color: var(--lightGrayColor);
+    font-size: 0.6rem;
+}
+.verticalAlign{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.btn1{
+    background:linear-gradient(90deg, var(--primaryColor) 0%, var(--primaryColorLight) 100%); 
+    color: black;
+    border-radius: 0.5rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
+.btn2{
+    background-color: transparent;
+    color: var(--whiteColor);
+    border-radius: 0.5rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    border: 1px solid var(--primaryColor);
+}
+.rattingTag{
+    background-color: var(--primaryColor);
+    color:black;
+    border-bottom-left-radius: 0.5rem;
+    font-size: 0.6rem;
+    position: absolute;
+    right: 16px;
+    top: 0;
+    padding: 0.2rem;
+}
+.activeIndicator{
+    background:radial-gradient(50% 50% at 50% 50%, var(--primaryColor) 0%, var(--backgroundColor) 100%);
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    border: 1px solid var(--primaryColor);
+
 }

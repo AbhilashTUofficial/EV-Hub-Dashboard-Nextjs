@@ -1,16 +1,17 @@
 .evCarsCardCont{
     /* display: flex; */
     min-height: 200px;
+    max-height: 200px;
     width: 100%;
-    justify-content: center;
     align-items: center;
     padding: 1rem;
+    /* background-color: red; */
     transition: all 0.3s ease;
 }
 @media screen and(max-width: 1200px) {
     .evCarsCardCont{
         flex: none;
-        height: 260px;
+        height: 200px;
     }
 }
 

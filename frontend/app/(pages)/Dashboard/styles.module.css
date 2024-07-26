@@ -25,13 +25,11 @@
     display: flex;
     flex:1;
     flex-direction: column;
-    justify-content: space-between;
 }
 .section2{
     display: flex;
     flex:2;
     flex-direction: column;
-    justify-content: space-between;
 
 }
 

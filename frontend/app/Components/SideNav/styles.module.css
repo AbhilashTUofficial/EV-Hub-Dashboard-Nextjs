@@ -42,6 +42,12 @@
     .title{
         display: none;
     }
+    .activeTabTxt{
+        display: none;
+    }
+    .inactiveTabTxt{
+        display: none;
+    }
 }
 .navTabsCont{
     width: 260px;
@@ -97,13 +103,25 @@
     align-items: center;
     margin: 0.2rem;
 }
-.icon{
+.activeIcon{
+    width: 1.8rem;
+    height: 1.8rem;
+    transition: all 0.5s ease;
+}
+.inactiveIcon{
     width: 1.6rem;
     height: 1.6rem;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.5s ease;
 }
-.tabTxt{
+.activeTabTxt{
     margin-left: 0.6rem;
+    color: var(--primaryColor);
+    font-size: 1rem;
+}
+.inactiveTabTxt{
+    margin-left: 0.6rem;
+    color: var(--lightGrayColor);
+    font-size: 0.9rem;
 }
 @media screen and (max-width: 768px) {
     .tabTxt{
