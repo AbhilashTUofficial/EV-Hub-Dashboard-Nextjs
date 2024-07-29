@@ -1,11 +1,9 @@
 .evCarsCardCont{
-    /* display: flex; */
     min-height: 200px;
-    max-height: 200px;
+    min-width: 360px;
     width: 100%;
     align-items: center;
     padding: 1rem;
-    /* background-color: red; */
     transition: all 0.3s ease;
 }
 @media screen and(max-width: 1200px) {

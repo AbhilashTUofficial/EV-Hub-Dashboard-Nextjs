@@ -12,7 +12,10 @@ type ListItem = {
     parkingFee: number;
     perKwh: number;
     carStats: {
-        name: string;
+        model: {
+            name: string;
+            acdc: "AC/DC" | "DC" | "AC";
+        };
         kW: number;
     }[]
 
@@ -40,46 +43,51 @@ const StationsList: React.FC<{}> = () => {
                         </div>
                     </div>
                 </div>
+                <div className={styles.detaildInfo}>
+                    <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+                        <div className={styles.carStats}>
+                            <div style={{ position: "absolute", left: "5%" }} className={styles.txt1}>{item.carStats[0].model.name}</div>
+                            <div style={{ position: "absolute", left: "28%" }} className={styles.txt1d}>{item.carStats[0].model.acdc}</div>
+                            <div style={{ position: "absolute", left: "55%" }} className={styles.txt1}>{item.carStats[0].kW} kW</div>
+                            <div style={{ position: "absolute", left: "84%" }} className={styles.activeIndicator} />
+                        </div>
+                        <div className={styles.carStats}>
+                            <div style={{ position: "absolute", left: "5%" }} className={styles.txt1}>{item.carStats[1].model.name}</div>
+                            <div style={{ position: "absolute", left: "28%" }} className={styles.txt1d}>{item.carStats[1].model.acdc}</div>
+                            <div style={{ position: "absolute", left: "55%" }} className={styles.txt1}>{item.carStats[1].kW} kW</div>
+                            <div style={{ position: "absolute", left: "84%" }} className={styles.activeIndicator} />
+                        </div>
 
-                <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-                    <div className={styles.carStats}>
-                        <div className={styles.txt1}>{item.carStats[0].name}</div>
-                        <div className={styles.xtx1}>{item.carStats[0].kW} kW</div>
-                        <div className={styles.activeIndicator} />
                     </div>
-                    <div className={styles.carStats}>
-                        <div className={styles.txt1}>{item.carStats[1].name}</div>
-                        <div className={styles.txt1}>{item.carStats[1].kW} kW</div>
-                        <div className={styles.activeIndicator} />
+                    <div className={styles.timeingData}>
+                        <div>
+                            <div className={styles.txt2}>Parking Fee</div>
+                            <div className={styles.txt1}>${item.parkingFee}</div>
+                        </div>
+                        <div>
+                            <div className={styles.txt2}>Per kwh</div>
+                            <div className={styles.txt1}>${item.perKwh}</div>
+                        </div>
                     </div>
+                    <div className={styles.timeingData}>
+                        <div>
+                            <div className={styles.txt2}>Arrive</div>
+                            <div className={styles.txt1}>Today 09:15</div>
+                        </div>
+                        <div>
+                            <div className={styles.txt2}>Depart</div>
+                            <div className={styles.txt1}>Today 11:25</div>
+                        </div>
+                    </div>
+                </div>
 
-                </div>
-                <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-                    <div>
-                        <div className={styles.txt2}>Parking Fee</div>
-                        <div className={styles.txt1}>${item.parkingFee}</div>
-                    </div>
-                    <div>
-                        <div className={styles.txt2}>Per kwh</div>
-                        <div className={styles.txt1}>${item.perKwh}</div>
-                    </div>
-                </div>
-                <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-                    <div>
-                        <div className={styles.txt2}>Arrive</div>
-                        <div className={styles.txt1}>Today 09:15</div>
-                    </div>
-                    <div>
-                        <div className={styles.txt2}>Depart</div>
-                        <div className={styles.txt1}>Today 11:25</div>
-                    </div>
-                </div>
-                <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+
+                <div className={styles.btnCont} >
                     <div className={styles.btn1}>Book</div>
                     <div className={styles.btn2}>Support</div>
                 </div>
 
-            </div>
+            </div >
         )
     }
 
@@ -94,11 +102,17 @@ const StationsList: React.FC<{}> = () => {
             parkingFee: 10,
             carStats: [
                 {
-                    name: 'Tesla (AC/DC)',
+                    model: {
+                        name: 'Tesla',
+                        acdc: "AC/DC"
+                    },
                     kW: 100
                 },
                 {
-                    name: 'Tesla (AC/DC)',
+                    model: {
+                        name: 'Tesla',
+                        acdc: "AC"
+                    },
                     kW: 100
                 },
             ]
@@ -112,11 +126,17 @@ const StationsList: React.FC<{}> = () => {
             parkingFee: 10,
             carStats: [
                 {
-                    name: 'Tesla (AC/DC)',
+                    model: {
+                        name: 'Tesla',
+                        acdc: "AC/DC"
+                    },
                     kW: 100
                 },
                 {
-                    name: 'Tesla (AC/DC)',
+                    model: {
+                        name: 'Tesla',
+                        acdc: "AC/DC"
+                    },
                     kW: 100
                 },
             ]

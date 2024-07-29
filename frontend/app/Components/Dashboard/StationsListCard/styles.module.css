@@ -52,6 +52,52 @@
     display: flex;
     flex-direction: row;
 }
+
+.detaildInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1rem;
+}
+.timeingData{
+    display: flex;
+    flex-direction:column;
+     gap: 0.5rem;
+     justify-content: space-between;
+     /* width: 100%; */
+}
+.btnCont{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+@media screen and (max-width: 1200px) {
+    .generalInfo{
+        flex-direction: column;
+    }
+  
+}
+@media screen and (max-width: 900px) {
+    .detaildInfo{
+        flex-direction: column;
+    }
+    .timeingData{
+        /* display: flex; */
+        flex-direction: row;
+    }
+    .btnCont{
+        display: none;
+    }
+    .stationsListCardCont{
+        height: 100%;
+    }
+}
+.verticalAlign{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
 .stationStatus{
     display: flex;
     flex-direction: column;
@@ -59,18 +105,25 @@
     align-items: center;
 }
 .carStats{
+    position: relative;
     background-color: var(--backgroundColor);
-    padding: 0.4rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
     border-radius: 0.5rem;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 0.5rem;
     margin-right: 1rem;
     margin-bottom: 0.2rem;
     margin-top: 0.2rem;
     font-size: 0.6rem;
     border: 1px solid var(--primaryColor);
+    height: 1.8rem;
+    width: 11rem;
 }
 .stationImg{
     width: 4rem;
@@ -80,6 +133,10 @@
 }
 .txt1{
     color: var(--whiteColor);
+    font-size: 0.8rem;
+}
+.txt1d{
+    color: var(--lightGrayColor);
     font-size: 0.8rem;
 }
 .txt2{
