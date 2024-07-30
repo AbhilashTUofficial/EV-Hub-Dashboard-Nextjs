@@ -6,43 +6,35 @@ type SegmentData = {
     values: number[]
     segmentColor: string
 }
-const Chart = () => {
-    const segmentCount = 24;
-    const data: { segmentation: SegmentData[] } = {
-        segmentation: [
-            {
-                segmentName: 'segment 1',
-                values: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 10, 8],
-                segmentColor: 'red'
-            },
-            {
-                segmentName: 'segment 2',
-                values: [5, 3, 2, 14, 5, 3, 2, 14, 5, 3, 2, 14, 5, 3, 2, 14, 5, 3, 2, 14, 5, 3, 2, 14],
-                segmentColor: 'green'
 
-            }
-        ]
-    }
+type ChartProps = {
+    data: { segmentation: SegmentData[] }
+    visibleGraph: "all" | "day" | "week" | "month" | "year"
+}
+const Chart: React.FC<ChartProps> = ({ data, visibleGraph }) => {
+    const segmentCount = 24;
+
     return (
         <div className={styles.chart}>
-            {/* <div className={styles.segment}>
+            <div className={styles.segment}>
                 {
                     Array.from({ length: segmentCount }, (_, index) => (
                         <div className={styles.emptySegment} key={index} />
                     ))
                 }
-            </div> */}
+            </div>
 
             {
                 data.segmentation.map((segments, index) => (
                     <div className={styles.segment}>
-                        {/* {
-                            segments.values.map((segments, index) => (
-                                Array.from({ length: segmentCount }, (_, index) => (
-                                    <div className={styles.dataSegment} key={index} />
-                                ))
+                        {
+                            Array.from({ length: segmentCount }, (_, index) => (
+                                <div style={{
+                                    backgroundColor: segments.segmentColor, height: segments.values[index]
+                                }}
+                                    className={styles.dataSegment} key={index} />
                             ))
-                        } */}
+                        }
                     </div>
                 ))
             }

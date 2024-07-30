@@ -5,9 +5,34 @@ import Card from '../../Card'
 import Image from 'next/image'
 import Chart from './Chart'
 import Filters from './Filters'
-
+type SegmentData = {
+    segmentName: string
+    values: number[]
+    segmentColor: string
+}
 const ChargeStatsCard = () => {
+    const data: { segmentation: SegmentData[] } = {
+        segmentation: [
+            {
+                segmentName: 'segment 1',
+                values: Array.from({ length: 24 }, () => Math.floor(Math.random() * 200) + 50),
+                segmentColor: 'red'
+            },
+            {
+                segmentName: 'segment 2',
+                values: Array.from({ length: 24 }, () => Math.floor(Math.random() * 200) + 50),
+                segmentColor: 'yellow'
 
+            },
+            {
+                segmentName: 'segment 3',
+                values: Array.from({ length: 24 }, () => Math.floor(Math.random() * 200) + 50),
+                segmentColor: "var(--primaryColor)"
+
+            }
+        ]
+    }
+    const [visibleGraph, setVisibleGraph] = React.useState<"all" | "day" | "week" | "month" | "year">("all")
     return (
         <Card>
             <div className={styles.chargeStatsCardCont}>
@@ -45,7 +70,7 @@ const ChargeStatsCard = () => {
                         <div className={styles.fieldValue}>651</div>
                     </div>
                 </div>
-                <Chart />
+                <Chart data={data} visibleGraph={visibleGraph} />
                 <Filters />
 
             </div>

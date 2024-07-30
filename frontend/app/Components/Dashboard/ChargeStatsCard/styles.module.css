@@ -74,19 +74,18 @@
 .emptySegment{
     height: 100%;
     background-color: dimgray;
-    width: 1rem;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
+    width: 20px;
     z-index: 0;
 }
 .dataSegment{
     height: 100%;
-    background-color: var(--primaryColor);
-    width: 1rem;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
+    width: 20px;
     z-index: 1;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    transition: all 0.3s ease;
 }
+
 .segment{
     position: absolute;
     height: 100%;
@@ -97,11 +96,14 @@
     bottom: 0;
     left: 0;
     z-index: 0;
-    /* background-color: red; */
+    align-items: flex-end;
+    justify-content: space-evenly;
 }
-
-
-
+@media screen and (max-width: 900px) {
+    .segment{
+        overflow-x: scroll;
+    }
+}
 .chartFilterCont{
     display: flex;
     flex-direction: row;

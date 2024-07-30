@@ -21,6 +21,22 @@ export enum scaleIcon{
     active=require('../Images/scale_active_icon.png'),
     inactive=require('../Images/scale_inactive_icon.png')
 }
+export enum caseIcon{
+    active=require('../Images/case_white_icon.png'),
+    inactive=require('../Images/case_black_icon.png')
+}
+export enum turnIcon{
+    active=require('../Images/turn_white_icon.png'),
+    inactive=require('../Images/turn_black_icon.png')
+}
+export enum thunderIcon2{
+    active=require('../Images/thunder_white_icon.png'),
+    inactive=require('../Images/thunder_black_icon.png')
+}
+export enum moreIcon{
+    active=require('../Images/more_white_icon.png'),
+    inactive=require('../Images/more_black_icon.png')
+}
 export const gasStationsImgs=[
     require('../Images/gas_station_1.jpg'),
     require('../Images/gas_station_2.jpg'),
