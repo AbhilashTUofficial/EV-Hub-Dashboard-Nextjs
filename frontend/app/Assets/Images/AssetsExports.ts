@@ -7,7 +7,8 @@ export enum dashboardIcon {
 }
 export enum locationIcon {
     active=require('../Images/location_active_icon.png'),
-    inactive=require('../Images/location_inactive_icon.png')
+    inactive=require('../Images/location_inactive_icon.png'),
+    filled=require('../Images/location_filled_icon.png')
 }
 export enum mapIcon{
     active=require('../Images/map_active_icon.png'),
@@ -41,9 +42,14 @@ export const gasStationsImgs=[
     require('../Images/gas_station_1.jpg'),
     require('../Images/gas_station_2.jpg'),
 ]
+export const gasStationIcon = require('../Images/gas_station_icon.png');
 export const searchIcon = require('../Images/search_icon.png');
 export const infoIcon = require('../Images/info_icon.png');
 export const moonIcon = require('../Images/moon_icon.png');
 export const notififcationIcon = require('../Images/notification_icon.png');
 export const fireGrayIcon = require('../Images/fire_gray_icon.png');
 export const mapBackgroundImg = require('../Images/map_background_img.jpg');
+export const mapBackgroundImgs=[
+    require('../Images/map_background_img.jpg'),
+    require('../Images/map_background_img2.png'),
+]

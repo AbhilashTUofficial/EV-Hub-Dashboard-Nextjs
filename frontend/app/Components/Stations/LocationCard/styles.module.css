@@ -2,8 +2,56 @@
     display: flex;
     min-height: 400px;
     width: 100%;
-    justify-content: center;
-    align-items: center;
     padding: 1rem;
     transition: all 0.3s ease;
+    flex-direction: column;
+}
+.titleCont{ 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.title{
+    font-size: 1.4rem;
+    margin:0.5rem;
+}
+.icon{
+    width: 24px;
+    height: 24px;
+}
+.mapCont{
+    display: flex;
+    flex: 2;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    box-shadow: 0 0 10px 0 var(--darkGrayColor);
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.searchBar{
+    width: 200px;
+    height: 30px;
+    border-radius: 0.5rem;
+    border: none;
+    padding: 0 0.5rem;
+    font-size: 0.6rem;
+    background-color: var(--backgroundColor);
+    box-shadow: 0 0 10px 0 var(--darkGrayColor);
+    padding: 0 1rem;
+    outline: none;
+
+}
+.map{
+    width: 100%;
+    height: 100%;
 }

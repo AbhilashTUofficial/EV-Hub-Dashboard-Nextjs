@@ -1,10 +1,10 @@
 import React from 'react'
-import GasStationCard from './GasStationCard'
+import GasStationsList from './GasStationsList'
 
 const GasStationList = () => {
     return (
         <div>
-            <GasStationCard />
+            <GasStationsList />
         </div>
     )
 }

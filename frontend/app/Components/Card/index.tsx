@@ -3,11 +3,13 @@ import styles from './styles.module.css'
 
 type Props = {
     children: React.ReactNode;
+    style?: React.CSSProperties
+
 }
 
-const Card: React.FC<Props> = ({ children }) => {
+const Card: React.FC<Props> = ({ children, style }) => {
     return (
-        <div className={styles.cardCont}>{children}</div>
+        <div style={style} className={styles.cardCont}>{children}</div>
     )
 }
 

@@ -1,9 +1,80 @@
-.gasStationCardCont{
+.gasStationsListCont{
     display: flex;
-    min-height: 200px;
-    width: 100%;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
+    gap: 1rem;
+}
+.gasStationCardCont{
+    flex:1;
+    min-height: 200px;
+    min-width: 220px;
     padding: 1rem;
-    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.gasStationIcon{
+    height: 3rem;
+    width: 3rem;
+}
+.moreBtn{
+    height: 1.5rem;
+    width: 1.5rem;
+    opacity: 0.5;
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+}
+.locationCont{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.distance{
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.directionCont{
+    height: 1.5rem;
+    width: 1.5rem;
+    border:1px solid var(--primaryColor);
+    border-radius: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.directionIcon{
+    height: 0.8rem;
+    width: 0.8rem;
+}
+.stationData{
+    display: flex;
+    justify-content: space-between;
+}
+.stationName{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+.dataName{
+    font-size: 0.8rem;
+    color: var(--lightGrayColor);
+    margin-bottom: 0.4rem;
+}
+.dataValue{
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 0.2rem;
 }
