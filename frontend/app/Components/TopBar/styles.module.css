@@ -30,21 +30,28 @@
     display: flex;
     align-items: center;
     height: 50px;
-    width: 390px;
     background-color: var(--secondaryColor);
     border-radius: 99rem;
     justify-content: space-evenly;
     align-items: center;
+    padding-right: 0.4rem;
+    padding-left: 0.4rem;
 }
 .searchBar{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
     height: 40px;
-    width: 200px;
     border-radius: 99rem;
     background-color: var(--backgroundColor);
+    transition: all 0.5s ease-in-out;
+}
+.searchBarFocused{
+    width: 400px;
+}
+.searchBarUnfocused{
+    width: 200px;
+
 }
 .icon{
     width: 20px;

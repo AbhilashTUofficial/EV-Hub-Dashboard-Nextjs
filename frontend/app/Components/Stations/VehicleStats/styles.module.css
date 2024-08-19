@@ -1,9 +1,91 @@
 .vehicleStatsCardCont{
     display: flex;
-    min-height: 400px;
+    flex-direction: column;
+    /* min-height: 400px; */
     width: 100%;
-    justify-content: center;
     align-items: center;
     padding: 1rem;
     transition: all 0.3s ease;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.title{
+    font-size: 1.4rem;
+    margin:0.5rem;
+    
+}
+.moreIcon{
+    height: 1.6rem;
+    width: 1.6rem;
+    opacity: 0.5;
+}
+.carImage{
+    width: 80%;
+    height: 80%;
+    margin-top: 0.8rem;
+}
+.vehicleStatsCont{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 1.6rem;
+}
+.key{
+    font-size: 0.8rem;
+    color:var(--lightGrayColor);
+    margin-top: 0.5rem;
+    margin-bottom: 0.2rem;
+}
+.value{
+    font-size: 1.2rem;
+    color:var(--whiteColor);
+    margin-bottom: 0.2rem;
+    margin-top: 0.5rem;
+    display: flex;
+}
+.unit{
+    color:var(--lightGrayColor);
+    margin-left: 0.2rem;
+}
+.unitIcon{
+    height: 1.4rem;
+    width: 1.4rem;
+}
+.moreVehicleStats{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap:1.6rem;
+
+}
+.locationStats, .batteryStats{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--backgroundColor);
+    padding: 1.6rem;
+    border-radius: 1rem;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+.avgEngCont{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--backgroundColor);
+    padding: 1.6rem;
+    border-radius: 1rem;
+    margin-top: 1.6rem;
+    width: 100%;
+}
+.mapImage{
+    width: 100%;
+    height: 6rem;
+    margin-top: 1.6rem;
+    border-radius: 1rem;
 }

@@ -48,6 +48,7 @@ export const infoIcon = require('../Images/info_icon.png');
 export const moonIcon = require('../Images/moon_icon.png');
 export const notififcationIcon = require('../Images/notification_icon.png');
 export const fireGrayIcon = require('../Images/fire_gray_icon.png');
+export const carImage = require('../Images/car_image.png');
 export const mapBackgroundImg = require('../Images/map_background_img.jpg');
 export const mapBackgroundImgs=[
     require('../Images/map_background_img.jpg'),
