@@ -113,7 +113,6 @@
     margin: 1rem 0;
 }
 .filterIcon{
-    background: linear-gradient(90deg, var(--primaryColor) 0%, var(--primaryColorLight) 100%); ;
     color: var(--whiteColor);
     border-radius: 50%;
     padding: 0.4rem;

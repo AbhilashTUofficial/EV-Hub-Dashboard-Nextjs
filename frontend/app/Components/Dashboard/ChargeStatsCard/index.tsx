@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './styles.module.css'
 import Card from '../../Card'
 import Image from 'next/image'
@@ -21,7 +21,7 @@ const ChargeStatsCard = () => {
             {
                 segmentName: 'segment 2',
                 values: Array.from({ length: 24 }, () => Math.floor(Math.random() * 200) + 50),
-                segmentColor: 'yellow'
+                segmentColor: 'var(--amberColor)'
 
             },
             {
@@ -29,10 +29,24 @@ const ChargeStatsCard = () => {
                 values: Array.from({ length: 24 }, () => Math.floor(Math.random() * 200) + 50),
                 segmentColor: "var(--primaryColor)"
 
+            },
+            {
+                segmentName: 'segment 2',
+                values: Array.from({ length: 24 }, () => Math.floor(Math.random() * 200) + 50),
+                segmentColor: 'var(--purpleColor)'
+
+            },
+            {
+                segmentName: 'segment 3',
+                values: Array.from({ length: 24 }, () => Math.floor(Math.random() * 200) + 50),
+                segmentColor: "var(--orangeColor)"
+
             }
         ]
     }
     const [visibleGraph, setVisibleGraph] = React.useState<"all" | "day" | "week" | "month" | "year">("all")
+    const [selectedSegments, setSelectedSegments] = React.useState([data.segmentation[0]]);
+
     return (
         <Card>
             <div className={styles.chargeStatsCardCont}>
@@ -70,8 +84,8 @@ const ChargeStatsCard = () => {
                         <div className={styles.fieldValue}>651</div>
                     </div>
                 </div>
-                <Chart data={data} visibleGraph={visibleGraph} />
-                <Filters />
+                <Chart data={selectedSegments} visibleGraph={visibleGraph} />
+                <Filters data={data} setSelectedSegments={setSelectedSegments} selectedSegments={selectedSegments} />
 
             </div>
         </Card>

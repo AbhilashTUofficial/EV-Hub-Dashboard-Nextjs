@@ -8,7 +8,7 @@ type SegmentData = {
 }
 
 type ChartProps = {
-    data: { segmentation: SegmentData[] }
+    data: SegmentData[]
     visibleGraph: "all" | "day" | "week" | "month" | "year"
 }
 const Chart: React.FC<ChartProps> = ({ data, visibleGraph }) => {
@@ -25,7 +25,7 @@ const Chart: React.FC<ChartProps> = ({ data, visibleGraph }) => {
             </div>
 
             {
-                data.segmentation.map((segments, index) => (
+                data.map((segments, index) => (
                     <div className={styles.segment}>
                         {
                             Array.from({ length: segmentCount }, (_, index) => (
