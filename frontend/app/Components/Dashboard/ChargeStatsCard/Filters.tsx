@@ -22,14 +22,18 @@ const Filters: React.FC<FilterProps> = ({ data, setSelectedSegments, selectedSeg
 
         const handleClick = (currentData) => {
 
-            console.log("prev" + selectedSegments, "curr" + currentData)
-            if (!active) {
-                setActive(true)
-                setSelectedSegments((prev: any) => [currentData, ...prev.filter((segment: any) => segment.segmentName != currentData.segmentName)])
+            if (selectedSegments.filter((segment: any) => segment.segmentName == currentData.segmentName).length > 0) {
+
+                setSelectedSegments(selectedSegments.filter((segment: any) => segment.segmentName != currentData.segmentName))
             } else {
-                console.log("called")
-                // setSelectedSegments([selectedSegments.filter((segment: any) => segment.segmentName != currentData.segmentName)])
+                var prevData = selectedSegments.filter((segment: any) => segment.segmentName != currentData.segmentName);
+                var newData = [currentData]
+                prevData.forEach(seg => {
+                    newData.push(seg);
+                });
+                setSelectedSegments(newData.reverse())
             }
+
         }
 
         return (

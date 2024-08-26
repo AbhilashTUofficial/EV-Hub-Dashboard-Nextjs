@@ -31,13 +31,13 @@ const ChargeStatsCard = () => {
 
             },
             {
-                segmentName: 'segment 2',
+                segmentName: 'segment 4',
                 values: Array.from({ length: 24 }, () => Math.floor(Math.random() * 200) + 50),
                 segmentColor: 'var(--purpleColor)'
 
             },
             {
-                segmentName: 'segment 3',
+                segmentName: 'segment 5',
                 values: Array.from({ length: 24 }, () => Math.floor(Math.random() * 200) + 50),
                 segmentColor: "var(--orangeColor)"
 
