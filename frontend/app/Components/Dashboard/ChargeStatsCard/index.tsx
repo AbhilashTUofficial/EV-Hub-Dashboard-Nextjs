@@ -20,32 +20,32 @@ const ChargeStatsCard = () => {
             },
             {
                 segmentName: 'segment 2',
-                values: Array.from({ length: 24 }, () => Math.floor(Math.random() * 200) + 50),
+                values: Array.from({ length: 24 }, () => 0),
                 segmentColor: 'var(--amberColor)'
 
             },
             {
                 segmentName: 'segment 3',
-                values: Array.from({ length: 24 }, () => Math.floor(Math.random() * 200) + 50),
+                values: Array.from({ length: 24 }, () => 0),
                 segmentColor: "var(--primaryColor)"
 
             },
             {
                 segmentName: 'segment 4',
-                values: Array.from({ length: 24 }, () => Math.floor(Math.random() * 200) + 50),
+                values: Array.from({ length: 24 }, () => 0),
                 segmentColor: 'var(--purpleColor)'
 
             },
             {
                 segmentName: 'segment 5',
-                values: Array.from({ length: 24 }, () => Math.floor(Math.random() * 200) + 50),
+                values: Array.from({ length: 24 }, () => 0),
                 segmentColor: "var(--orangeColor)"
 
             }
         ]
     }
     const [visibleGraph, setVisibleGraph] = React.useState<"all" | "day" | "week" | "month" | "year">("all")
-    const [selectedSegments, setSelectedSegments] = React.useState([data.segmentation[0]]);
+    const [segmentation, setSegmentation] = React.useState<SegmentData[]>(data.segmentation);
 
     return (
         <Card>
@@ -84,8 +84,8 @@ const ChargeStatsCard = () => {
                         <div className={styles.fieldValue}>651</div>
                     </div>
                 </div>
-                <Chart data={selectedSegments} visibleGraph={visibleGraph} />
-                <Filters data={data} setSelectedSegments={setSelectedSegments} selectedSegments={selectedSegments} />
+                <Chart data={segmentation} />
+                <Filters setSegmentation={setSegmentation} segmentation={segmentation} />
 
             </div>
         </Card>

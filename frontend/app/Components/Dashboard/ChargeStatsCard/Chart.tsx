@@ -9,9 +9,8 @@ type SegmentData = {
 
 type ChartProps = {
     data: SegmentData[]
-    visibleGraph: "all" | "day" | "week" | "month" | "year"
 }
-const Chart: React.FC<ChartProps> = ({ data, visibleGraph }) => {
+const Chart: React.FC<ChartProps> = ({ data }) => {
     const segmentCount = 24;
 
     return (

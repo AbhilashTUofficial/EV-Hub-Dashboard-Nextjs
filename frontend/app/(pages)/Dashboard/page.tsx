@@ -10,8 +10,10 @@ const Dashboard = () => {
         <div className={styles.dashboardCont}>
             <div className={styles.dashboard}>
                 <div className={styles.section1}>
-                    <EVCarsCard />
-                    <GasSavingsCard />
+                    <div className={styles.primaryDataCont}>
+                        <EVCarsCard />
+                        <GasSavingsCard />
+                    </div>
                     <QuickPlannerCard />
                 </div>
                 <div className={styles.section2}>

@@ -2,7 +2,6 @@
     min-height: 200px;
     min-width: 360px;
     width: 100%;
-    align-items: center;
     padding: 1rem;
     transition: all 0.3s ease;
 }
@@ -10,6 +9,7 @@
     .evCarsCardCont{
         flex: none;
         height: 200px;
+
     }
 }
 

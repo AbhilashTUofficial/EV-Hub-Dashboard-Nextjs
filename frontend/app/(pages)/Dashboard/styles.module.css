@@ -20,6 +20,11 @@
     .dashboard{
         display: block;
     }
+    .primaryDataCont{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
 }
 .section1{
     display: flex;
@@ -30,8 +35,8 @@
     display: flex;
     flex:2;
     flex-direction: column;
-
 }
+
 
 
 

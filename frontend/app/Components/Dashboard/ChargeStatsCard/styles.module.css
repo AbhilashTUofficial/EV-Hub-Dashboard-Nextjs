@@ -10,6 +10,7 @@
     .chargeStatsCardCont{
         flex: none;
     } 
+
 }
 .header{
     display: flex;
@@ -41,9 +42,11 @@
     margin-top: 1rem;
     align-items: center;
 }
+
 .fieldTitle{
     font-size: 0.6rem;
     color: var(--lightGrayColor);
+    margin-bottom: 0.2rem;
 }
 .fieldValue{
     font-size: 1.4rem;
@@ -52,12 +55,11 @@
     justify-content: center;
     align-items: flex-end;
 }
-@media screen and (max-width: 1200px) {
-    .fields{
-        display: none;
+@media screen and (max-width: 600px) {
+    .fieldValue{
+        font-size: 0.8rem;
     }
 }
-
 .chart{
     width: 100%;
     height: 300px;
@@ -127,7 +129,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     height: 1rem;
 }
 .filterTxt{
@@ -147,11 +149,20 @@
     display: flex;
     justify-content: center;
 }
-@media screen and (max-width: 1200px) {
+
+
+@media screen and (max-width: 1300px) {
     .filterTxt{
         display: none;
     }
-    .filterValue{
+}
+@media screen and (max-width: 1200px) {
+    .filterTxt{
+        display: flex;
+    }
+}
+@media screen and (max-width: 900px) {
+    .filterTxt{
         display: none;
     }
 }

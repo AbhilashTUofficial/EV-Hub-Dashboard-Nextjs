@@ -8,8 +8,7 @@ type SegmentDataType = {
 type SegmentNameType= Pick<SegmentDataType, "segmentName">
 type SegmentColorType= Pick<SegmentDataType, "segmentColor">
 
-const useGetChargeStatSegData = ({segmentName,  segmentColor}: 
-    SegmentNameType & SegmentColorType): SegmentDataType => {
+const useGetChargeStatSegData = (segmentName:SegmentNameType,  segmentColor: SegmentColorType): SegmentDataType => {
     return {
         segmentName: segmentName,
         values: Array.from({ length: 24 }, () => Math.floor(Math.random() * 200) + 50),

@@ -1,59 +1,76 @@
 'use client'
-import React, { useEffect } from 'react'
+import React from 'react'
 import styles from './styles.module.css'
 import Image from 'next/image'
 import { caseIcon, moreIcon, thunderIcon2, turnIcon } from '@/app/Assets/Images/AssetsExports'
+import useGetChargeStatSegData from '@/hooks/useGetChargeStatSegData'
+
+// Define types for the segmentation and the props
+type Segment = {
+    segmentName: string;
+    values: number[];
+    segmentColor: string;
+}
 
 type FilterProps = {
-    data: any
-    setSelectedSegments: any
-    selectedSegments: any
+    setSegmentation: React.Dispatch<React.SetStateAction<Segment[]>>;
+    segmentation: Segment[];
 }
 
 type FilterTagProps = {
-    icon: any,
-    data: any
+    icon: any;
+    segmentColor: string;
+    segmentName: string;
+    segmentation: Segment[];
+    setSegmentation: React.Dispatch<React.SetStateAction<Segment[]>>;
 }
-const Filters: React.FC<FilterProps> = ({ data, setSelectedSegments, selectedSegments }) => {
-    const FilterTag: React.FC<FilterTagProps> = ({ icon, data }) => {
-        const [active, setActive] = React.useState(false);
 
+const Filters: React.FC<FilterProps> = ({ setSegmentation, segmentation }) => {
+    const FilterTag: React.FC<FilterTagProps> = ({ icon, segmentColor, segmentName, segmentation, setSegmentation }) => {
 
+        const checkSegmentEmpty = (segmentData: number[]) => segmentData.reduce((sum, value) => sum + value, 0) === 0;
 
-        const handleClick = (currentData) => {
+        const getCurrentSegment = (segmentName: string) => segmentation.find((segment) => segment.segmentName === segmentName);
 
-            if (selectedSegments.filter((segment: any) => segment.segmentName == currentData.segmentName).length > 0) {
+        const handleClick = (segmentName: string, segmentColor: string) => {
+            const unchangedData = segmentation.filter((segment) => segment.segmentName !== segmentName);
+            let newData: Segment = {
+                segmentName,
+                values: Array.from({ length: 24 }, () => 0),
+                segmentColor
+            };
 
-                setSelectedSegments(selectedSegments.filter((segment: any) => segment.segmentName != currentData.segmentName))
-            } else {
-                var prevData = selectedSegments.filter((segment: any) => segment.segmentName != currentData.segmentName);
-                var newData = [currentData]
-                prevData.forEach(seg => {
-                    newData.push(seg);
-                });
-                setSelectedSegments(newData.reverse())
+            const currentSegment = getCurrentSegment(segmentName);
+            if (currentSegment && checkSegmentEmpty(currentSegment.values)) {
+                newData = useGetChargeStatSegData(segmentName, segmentColor);
             }
 
-        }
+            setSegmentation([...unchangedData, newData]);
+        };
 
         return (
-            <div onClick={() => handleClick(data)} className={styles.chartFilter}>
-                <Image style={{ backgroundColor: data.segmentColor }}
-                    className={styles.filterIcon} src={active ? icon.active : icon.inactive} alt={'Filter Icon'} />
-                <div className={styles.filterTxt}>Ev Hub -</div>
+            <div onClick={() => handleClick(segmentName, segmentColor)} className={styles.chartFilter}>
+                <Image
+                    style={{ backgroundColor: segmentColor }}
+                    className={styles.filterIcon}
+                    src={checkSegmentEmpty(getCurrentSegment(segmentName)?.values || []) ? icon.inactive : icon.active}
+                    alt={'Filter Icon'}
+                />
+                <div className={styles.filterTxt}>Ev Hub</div>
                 <div className={styles.filterValue}>31%</div>
             </div>
-        )
-    }
+        );
+    };
+
     return (
         <div className={styles.chartFilterCont}>
-            <FilterTag data={data.segmentation[0]} icon={thunderIcon2} />
-            <FilterTag data={data.segmentation[1]} icon={caseIcon} />
-            <FilterTag data={data.segmentation[2]} icon={thunderIcon2} />
-            <FilterTag data={data.segmentation[3]} icon={turnIcon} />
-            <FilterTag data={data.segmentation[4]} icon={moreIcon} />
+            <FilterTag segmentName='segment 1' segmentColor='red' icon={thunderIcon2} segmentation={segmentation} setSegmentation={setSegmentation} />
+            <FilterTag segmentName='segment 2' segmentColor='var(--amberColor)' icon={caseIcon} segmentation={segmentation} setSegmentation={setSegmentation} />
+            <FilterTag segmentName='segment 3' segmentColor='var(--primaryColor)' icon={thunderIcon2} segmentation={segmentation} setSegmentation={setSegmentation} />
+            <FilterTag segmentName='segment 4' segmentColor='var(--purpleColor)' icon={turnIcon} segmentation={segmentation} setSegmentation={setSegmentation} />
+            <FilterTag segmentName='segment 5' segmentColor='var(--orangeColor)' icon={moreIcon} segmentation={segmentation} setSegmentation={setSegmentation} />
         </div>
-    )
+    );
 }
 
-export default Filters
+export default Filters;

@@ -7,7 +7,7 @@
     border:1px solid transparent;
 }
 .cardCont:hover{
-    box-shadow: 0 0 10px 0 var(--primaryColor);
-    border:1px solid var(--primaryColor);
+    box-shadow: 0 0 24px 0 var(--greenBorderGlow);
+    border:1px solid var(--backgroundColor);
 
 }
